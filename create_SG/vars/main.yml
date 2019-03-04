@@ -5,8 +5,8 @@ project_name: "CBA"
 #name: "{{ project_name}}_SG"
 my_ip: 31.168.228.10/32     # OK to hardcode
 ansible_ip: 3.8.26.4/32     # How to parametrize?
-aws_access_key: AWS_ACCESS_KEY_ID
-aws_secret_key: AWS_SECRET_ACCESS_KEY
+#aws_access_key: AWS_ACCESS_KEY_ID
+#aws_secret_key: AWS_SECRET_ACCESS_KEY
 ansible_srv_key : "meir_ansible_KP"
 
 security_group: "{{ project_name}}_SG"
