@@ -1,2 +1,6 @@
 ---
 # tasks file for create_KP
+- name: Create KP 
+
+  include_tasks: create_KP.yml
+
