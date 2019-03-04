@@ -1,0 +1,44 @@
+---
+
+- ec2_group:
+
+        #name: "{{ project_name}}_SG"
+        #description: "{{ project_name}} Test security group"
+        #region: "{{ aws_region }}" 
+        # Parametrize (no harcoding) 
+        #vpc_id: vpc-01d874d70d60c9eaf           # Is it parametrizable? 
+        #profile: "default" 
+        #aws_access_key: "{{ aws_access_key }}"
+        #aws_secret_key: "{{ aws_secret_key }}"
+        #state: absent
+        # Inboud rules
+        rules: 
+          - proto: tcp
+            from_port: 22
+            to_port: 22
+            cidr_ip: "{{ my_ip }}" 
+          - proto: tcp
+            from_port: 22
+            to_port: 22
+            cidr_ip: "{{ ansible_ip }}" 
+          - proto: tcp
+            from_port: 80
+            to_port: 80
+            cidr_ip: "{{ my_ip }}" 
+          - proto: tcp
+            from_port: 80
+            to_port: 80
+            cidr_ip: "{{ ansible_ip }}" 
+        # Outbound rules
+        rules_egress: 
+          - proto: tcp
+            from_port: 443
+            to_port: 443
+            cidr_ip: 0.0.0.0/0
+          - proto: tcp
+            from_port: 80
+            to_port: 80
+            cidr_ip: 0.0.0.0/0
+      #register: basic_firewall            
+      #
+
