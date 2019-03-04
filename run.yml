@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  roles:
+    - create_SG
+    - create_EC2_instance
