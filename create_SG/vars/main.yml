@@ -6,7 +6,8 @@ vpc_id: vpc-ba52c8d3
 # The subnet id must be associated with a route table with access to Internet (i.e. with an IGW) 
 subnet_id: subnet-cb3cf4a2
 
-#my_ip: 95.86.111.223/32
+# my_ip: IP of my working station 
+my_ip: 95.86.75.194/32
 
 #name: "{{ project_name}}_SG"
 #description: "{{ project_name}} Test security group"

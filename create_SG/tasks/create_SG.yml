@@ -1,5 +1,6 @@
 ---
 
+# We're launching ansible-playbook from somewhere and we don't know what's its public IP, so 
 # Get our public IP, so it can be allowed in the the Security Group for SSH
 - command: curl --silent --fail http://checkip.amazonaws.com/
   register: external_ip
@@ -28,8 +29,7 @@
           - proto: tcp
             from_port: 22
             to_port: 22
-            #cidr_ip: "{{ ansible_ip }}" 
-            cidr_ip: "{{ routable_ip }}" 
+            cidr_ip: "{{ my_ip }}" 
           - proto: tcp
             from_port: 80
             to_port: 80
@@ -37,8 +37,7 @@
           - proto: tcp
             from_port: 80
             to_port: 80
-            #cidr_ip: "{{ ansible_ip }}" 
-            cidr_ip: "{{ routable_ip }}" 
+            cidr_ip: "{{ my_ip }}" 
         # Outbound rules
         rules_egress: 
           - proto: tcp
