@@ -16,8 +16,8 @@
         # Parametrize (no harcoding) 
         #vpc_id: vpc-01d874d70d60c9eaf           # Is it parametrizable? 
         #profile: "default" 
-        #aws_access_key: "{{ aws_access_key }}"
-        #aws_secret_key: "{{ aws_secret_key }}"
+        aws_access_key: "{{ aws_access_key_id }}"
+        aws_secret_key: "{{ aws_secret_access_key }}"
         #state: absent
         #
         # Inboud rules

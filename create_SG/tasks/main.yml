@@ -1,9 +1,7 @@
 ---
 # tasks file for create_SG
-- name: Create SG
-  ##include_vars:
-  ##  file: SG_param.yaml
-    ##name: sg_params
+- include_vars: aws_keys.yml
 
+- name: Create SG
   include_tasks: create_SG.yml
 

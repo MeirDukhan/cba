@@ -14,7 +14,7 @@ my_ip: 95.86.75.194/32
 #region: "{{ aws_region }}"
 
 #profile: "meir" 
-#my_aws_access_key: <my access key>
-#my_aws_secret_key: <my secret key>
+#aws_access_key: "{{ aws_access_key_id }}" 
+#aws_secret_key: "{{ aws_secret_access_key }}"
 
 
