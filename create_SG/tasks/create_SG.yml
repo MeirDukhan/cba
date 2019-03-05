@@ -26,6 +26,7 @@
             from_port: 22
             to_port: 22
             cidr_ip: "{{ routable_ip }}" 
+            group_desc: "SSH for the server running ansible-playbook" 
           - proto: tcp
             from_port: 22
             to_port: 22
