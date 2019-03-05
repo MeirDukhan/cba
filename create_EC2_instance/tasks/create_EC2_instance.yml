@@ -1,9 +1,11 @@
 - ec2:
-        key_name: "{{ ansible_srv_key }}" 
+        #key_name: "{{ ansible_srv_key }}" 
         instance_type: t2.micro                 # Put in parameter/variable
         #profile: "meir"
         #aws_access_key: "{{ aws_access_key }}"
         #aws_secret_key: "{{ aws_secret_key }}"
+        keypair: "cba-challenge-key" 
+
         image: ami-01419b804382064e4            # Put in parameter/variable
         wait: no
         group: "{{ security_group }}"
