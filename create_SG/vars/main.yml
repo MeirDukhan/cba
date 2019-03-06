@@ -12,7 +12,7 @@ subnet_id: subnet-07e470c0e45c608be
 #subnet_id: subnet-cb3cf4a2
 
 # my_ip: IP of my working station 
-my_ip: 95.86.75.192/32
+#my_ip: 95.86.75.192/32
 
 #name: "{{ project_name}}_SG"
 #description: "{{ project_name}} Test security group"
