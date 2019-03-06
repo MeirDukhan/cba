@@ -13,16 +13,16 @@ assign_public_ip: yes
 security_group: "{{ project_name}}_SG"
 
 # Original vpc_id and subnet_id in for CBA challenge
-#subnet_id: subnet-07e470c0e45c608be
-#vpc_id: vpc-01d874d70d60c9eaf
+subnet_id: subnet-07e470c0e45c608be
+vpc_id: vpc-01d874d70d60c9eaf
 # Original key pair name in CBA challenge
 #ansible_srv_key : "meir_ansible_KP" 
 
 #
 # vpc_id and subnet_id in My environment 
-vpc_id: vpc-ba52c8d3
+#vpc_id: vpc-ba52c8d3
 # The subnet id must be associated with a route table with access to Internet (i.e. with an IGW) 
-subnet_id: subnet-cb3cf4a2
+#subnet_id: subnet-cb3cf4a2
 
 #name: "{{ project_name}}_SG"
 #description: "{{ project_name}} Test security group"

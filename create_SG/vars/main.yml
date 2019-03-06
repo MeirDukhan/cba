@@ -2,9 +2,14 @@
 aws_region: eu-west-2
 project_name: "CBA"
 
-vpc_id: vpc-ba52c8d3
+# CBA VPC & Subnet ids 
+vpc_id: vpc-01d874d70d60c9eaf
+subnet_id: subnet-07e470c0e45c608be
+
+# My environment VPC & Subnet ids 
+#vpc_id: vpc-ba52c8d3
 # The subnet id must be associated with a route table with access to Internet (i.e. with an IGW) 
-subnet_id: subnet-cb3cf4a2
+#subnet_id: subnet-cb3cf4a2
 
 # my_ip: IP of my working station 
 my_ip: 95.86.75.194/32
