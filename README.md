@@ -34,6 +34,10 @@ A list of other roles hosted on Galaxy should go here, plus any details in regar
 
 Running the Playbook 
 --------------------
+$ cd ~ 
+$ git clone https://github.com/MeirDukhan/cba.git
+$ cd ~/cba 
+
 $ ansible-playbook run.yml --vault-password-file vault-pass.txt --extra-vars "my_ip=<IP of my workstation>/32" 
 
 A log is available in ~/ansible.log 
