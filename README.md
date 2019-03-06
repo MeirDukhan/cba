@@ -25,7 +25,8 @@ Requirements
 ------------
 
 Ansible installed and an AWS account with appropriate credentials.
-Also: boto and boto3 must be installed as well, either system wide or by using a virtualenv & pip. 
+
+Also: **boto and boto3** must be installed as well, either system wide or by using a **virtualenv & pip**.
  
 git is required to download the Ansible code.
 
