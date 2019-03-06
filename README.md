@@ -47,6 +47,7 @@ Variables In role create_SG, in ./create_SG/vars/main.yml
 
 
 Variables In role create_EC2, in ./create_EC2/vars/main.yml
+
 	- aws_region: eu-west-2
 	- project_name: "CBA"
 	- instance_type: t2.micro
