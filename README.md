@@ -99,7 +99,7 @@ The EC2 instance created is an Amazon one, so login using the ec2-user@<IP addre
 
 Running a specific role
 -----------------------
-CAUTION: when running a role via and Ansible ad-hoc command, I noticed that the log decrypt and write your AWS access key in the log file. So, be careful. 
+**CAUTION:** when running a role via and Ansible ad-hoc command, I noticed that the log decrypt and write your AWS access key in the log file. So, be careful. 
 
 You can also run each role individualy. 
 
