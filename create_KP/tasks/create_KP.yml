@@ -5,7 +5,7 @@
      name: cba-challenge-key
      aws_access_key: "{{ aws_access_key_id }}"
      aws_secret_key: "{{ aws_secret_access_key }}" 
-     region: eu-west-2
+     region: "{{ aws_region }}"
      force: yes
   register: ec2_key_result
 

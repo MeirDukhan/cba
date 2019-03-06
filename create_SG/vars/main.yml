@@ -5,7 +5,6 @@ project_name: "CBA"
 # CBA VPC & Subnet ids 
 vpc_id: vpc-01d874d70d60c9eaf
 subnet_id: subnet-07e470c0e45c608be
-#vpc_subnet_id: subnet-07e470c0e45c608be
 
 # My environment VPC & Subnet ids 
 #vpc_id: vpc-ba52c8d3

@@ -2,10 +2,6 @@
 aws_region: eu-west-2
 project_name: "CBA"
 
-#my_ip: 31.168.228.10/32     # OK to hardcode
-#ansible_ip: 3.8.26.4/32     # How to parametrize?
-#aws_access_key: AWS_ACCESS_KEY_ID
-#aws_secret_key: AWS_SECRET_ACCESS_KEY
 instance_type: t2.micro
 image: ami-01419b804382064e4
 assign_public_ip: yes
@@ -24,7 +20,5 @@ vpc_id: vpc-01d874d70d60c9eaf
 # The subnet id must be associated with a route table with access to Internet (i.e. with an IGW) 
 #subnet_id: subnet-cb3cf4a2
 
-#name: "{{ project_name}}_SG"
-#description: "{{ project_name}} Test security group"
-region: "{{ aws_region }}" 
+#region: "{{ aws_region }}" 
 
