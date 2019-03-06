@@ -11,6 +11,14 @@
    5. Present a web-page that is showing the IP address of the local IP address of machine on which it is running and have the web-app to listen on port 80
  
 
+Given
+-----
+The following are the given: 
+	- The vpc_id 
+	- The subnet_id with 
+	
+Assuming, the subnet_id is a public subnet, i.e. routable to the Internet. 
+
 Requirements
 ------------
 
@@ -26,15 +34,44 @@ Dependencies
 
 A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
-Example Playbook
-----------------
+Running the Playbook 
+--------------------
 $ ansible-playbook run.yml --vault-password-file vault-pass.txt --extra-vars "my_ip=<IP of my workstation>/32" 
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+A log is available in ~/ansible.log 
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+Checking 
+--------
+	- The key pair created is cba-challenge-key and is stored into ~/.ssh/cba-challenge-key.pem
+
+	Get the instance public IP 
+	- aws ec2 describe-instances --filters Name=instance.group-name,Values='CBA_SG' | grep PublicIpAddress 
+
+	- ssh -i ~/.ssh/cba-challenge-key.pem ec2-user@<IP Address> 
+	- curl <IP Address> should give you the private IP address of the created instance 
+
+	Filter on the security group description to check its setup: 
+	- aws ec2 describe-security-groups --filters Name=description,Values='CBA Challenge security group'
+
+IMPORTANT
+---------
+The EC2 instance created is an Amazon one, so login using the ec2-user@<IP address> 
+	- ssh -i ~/.ssh/cba-challenge-key.pem ec2-user@<IP Address>
+
+Running a specific role
+-----------------------
+You can also run each role individualy. 
+However the order od running matter: the EC2 instance must created last, after the key pair and the security croup have been created. 
+
+Key pair creation: 
+- ansible localhost -m include_role -a name=create_KP --vault-password-file vault-pass.txt
+
+Security Group creation: 
+Note that creation of the security group requires the IP of your workstation as an extra parameter, to allow SSH and HTTP.
+- ansible localhost -m include_role -a name=create_SG --vault-password-file vault-pass.txt --extra-vars "my_ip=<IP of my workstation>/32"
+
+EC2 instance creation
+- ansible localhost -m include_role -a name=create_EC2_instance  --vault-password-file vault-pass.txt
 
 License
 -------
