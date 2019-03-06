@@ -13,9 +13,7 @@
 
 Given
 -----
-The following are the given: 
-	- The vpc_id 
-	- The subnet_id with 
+The **vpc_id** and the **subnet_id** are given. 
 	
 Assuming, the subnet_id is a public subnet, i.e. routable to the Internet. 
 
