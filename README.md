@@ -24,7 +24,7 @@ You will need to create your own aws_keys.yml vault file with the appropriate cr
 Requirements
 ------------
 
-Ansible installed and an AWS account with appropriate credentials.
+Ansible shoud be installed and an AWS account with appropriate credentials should be setup.
 
 Also: **boto and boto3** must be installed as well, either system wide or by using a **virtualenv & pip**.
  
