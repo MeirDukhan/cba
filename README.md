@@ -39,6 +39,9 @@ $ git clone https://github.com/MeirDukhan/cba.git
 $ cd ~/cba 
 
 $ Setup an ansible vault with file name: aws_keys.yml 
+- ansible-vault create aws_keys.yml 
+- echo 'my-ansible-vault-password' > vault-pass.txt && chmod 400 vault-pass.txt  
+
 
 $ ansible-playbook run.yml --vault-password-file vault-pass.txt --extra-vars "my_ip=<IP of my workstation>/32" 
 
