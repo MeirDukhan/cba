@@ -11,15 +11,5 @@ subnet_id: subnet-07e470c0e45c608be
 # The subnet id must be associated with a route table with access to Internet (i.e. with an IGW) 
 #subnet_id: subnet-cb3cf4a2
 
-# my_ip: IP of my working station 
-#my_ip: 95.86.75.192/32
-
-#name: "{{ project_name}}_SG"
-#description: "{{ project_name}} Test security group"
-#region: "{{ aws_region }}"
-
-#profile: "meir" 
-#aws_access_key: "{{ aws_access_key_id }}" 
-#aws_secret_key: "{{ aws_secret_access_key }}"
-
-
+# my_ip: put the IP of your workstation here or define it at playbook runtime with the --extra-vars "my_ip=<my IP address>/32"
+#my_ip: 1.1.1.1/32
