@@ -17,6 +17,10 @@ The **vpc_id** and the **subnet_id** are given.
 	
 Assuming, the subnet_id is a public subnet, i.e. routable to the Internet. 
 
+Not given
+--------- 
+You will need to create your own aws_keys.yml vault file with the appropriate credentials.
+
 Requirements
 ------------
 
