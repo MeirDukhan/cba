@@ -34,16 +34,16 @@ A list of other roles hosted on Galaxy should go here, plus any details in regar
 
 Running the Playbook 
 --------------------
-$ cd ~ 
-$ git clone https://github.com/MeirDukhan/cba.git
-$ cd ~/cba 
+	$ cd ~ 
+	$ git clone https://github.com/MeirDukhan/cba.git
+	$ cd ~/cba 
 
-$ Setup an ansible vault with file name: aws_keys.yml 
-- ansible-vault create aws_keys.yml 
-- echo 'my-ansible-vault-password' > vault-pass.txt && chmod 400 vault-pass.txt  
+	$ Setup an ansible vault with file name: aws_keys.yml 
+	- ansible-vault create aws_keys.yml 
+	- echo 'my-ansible-vault-password' > vault-pass.txt && chmod 400 vault-pass.txt  
 
 
-$ ansible-playbook run.yml --vault-password-file vault-pass.txt --extra-vars 'my_ip=\<IP of my workstation>/32'
+	$ ansible-playbook run.yml --vault-password-file vault-pass.txt --extra-vars 'my_ip=\<IP of my workstation>/32'
 
 A log is available in ~/ansible.log 
 
