@@ -46,7 +46,7 @@ Checking
 	- aws ec2 describe-instances --filters Name=instance.group-name,Values='CBA_SG' | grep PublicIpAddress 
 
 	- ssh -i ~/.ssh/cba-challenge-key.pem ec2-user@<IP Address> 
-	- curl <IP Address> should give you the private IP address of the created instance 
+	- curl <IP Address> should give you the **private IP address** of the created instance 
 
 	Filter on the security group description to check its setup: 
 	- aws ec2 describe-security-groups --filters Name=description,Values='CBA Challenge security group'
@@ -54,22 +54,23 @@ Checking
 IMPORTANT
 ---------
 The EC2 instance created is an Amazon one, so login using the ec2-user@<IP address> 
-	- ssh -i ~/.ssh/cba-challenge-key.pem ec2-user@<IP Address>
+	- **ssh -i ~/.ssh/cba-challenge-key.pem ec2-user@<IP Address>**
 
 Running a specific role
 -----------------------
 You can also run each role individualy. 
-However the order od running matter: the EC2 instance must created last, after the key pair and the security croup have been created. 
+
+However the order of running matter: the EC2 instance must created last, after the key pair and the security croup have been created. 
 
 Key pair creation: 
-- ansible localhost -m include_role -a name=create_KP --vault-password-file vault-pass.txt
+	- ansible localhost -m include_role -a name=create_KP --vault-password-file vault-pass.txt
 
 Security Group creation: 
 Note that creation of the security group requires the IP of your workstation as an extra parameter, to allow SSH and HTTP.
-- ansible localhost -m include_role -a name=create_SG --vault-password-file vault-pass.txt --extra-vars "my_ip=<IP of my workstation>/32"
+	- ansible localhost -m include_role -a name=create_SG --vault-password-file vault-pass.txt --extra-vars "my_ip=<IP of my workstation>/32"
 
 EC2 instance creation
-- ansible localhost -m include_role -a name=create_EC2_instance  --vault-password-file vault-pass.txt
+	- ansible localhost -m include_role -a name=create_EC2_instance  --vault-password-file vault-pass.txt
 
 License
 -------
