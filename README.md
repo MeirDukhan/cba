@@ -1,5 +1,5 @@
 # CBA Challenge
-=========
+===============
 
    1. Create a Security Group (on the existing VPC) which only allows access from the following:
 	- Inbound - Your IP address (SSH, HTTP); Ansible IP address (SSH)
@@ -24,7 +24,10 @@ You will need to create your own aws_keys.yml vault file with the appropriate cr
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Ansible installed and an AWS account with appropriate credentials.
+Also: boto and boto3 must be installed as well, either system wide or by using a virtualenv & pip. 
+ 
+git is required to download the Ansible code.
 
 Role Variables
 --------------
