@@ -33,6 +33,29 @@ git is required to download the Ansible code.
 Role Variables
 --------------
 
+Variables In role create_KP, in ./create_KP/vars/main.yml
+
+	- aws_region: set to eu-west-2. 
+
+Variables In role create_SG, in ./create_SG/vars/main.yml
+
+	- aws_region: set to eu-west-2. 
+	- project_name: "CBA"
+
+	- vpc_id: the VPC Id to be use
+	- subnet_id: Id of a **public subnet** within the vcp_id 
+
+
+Variables In role create_EC2, in ./create_EC2/vars/main.yml
+	- aws_region: eu-west-2
+	- project_name: "CBA"
+	- instance_type: t2.micro
+	- ami_image: ami-01419b804382064e4
+	- assign_public_ip: yes
+	- security_group: "{{ project_name}}_SG
+	- subnet_id: ... 
+	- vpc_id: ...
+
 A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
 Dependencies
