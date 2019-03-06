@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Create a security group. 
 
 Requirements
 ------------
@@ -12,6 +12,17 @@ Role Variables
 --------------
 
 A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+my_ip: the IP address of your personal workstation/laptop. 
+The following are the default values set in the vars/main.yml file. They are overridable using --extra-vars '\<param name>=value>' 
+aws_region: eu-west-2
+project_name: "CBA"
+
+# CBA VPC & Subnet ids
+vpc_id: vpc-01d874d70d60c9eaf
+subnet_id: subnet-07e470c0e45c608be
+
+e.g.: ansible localhost -m include_role -a name=create_SG --vault-password-file vault-pass.txt --extra-vars "my_ip=\<my ip address>/32"
+
 
 Dependencies
 ------------
