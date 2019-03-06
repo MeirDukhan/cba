@@ -3,7 +3,7 @@ aws_region: eu-west-2
 project_name: "CBA"
 
 instance_type: t2.micro
-image: ami-01419b804382064e4
+ami_image: ami-01419b804382064e4
 assign_public_ip: yes
 
 security_group: "{{ project_name}}_SG"
@@ -19,6 +19,4 @@ vpc_id: vpc-01d874d70d60c9eaf
 #vpc_id: vpc-ba52c8d3
 # The subnet id must be associated with a route table with access to Internet (i.e. with an IGW) 
 #subnet_id: subnet-cb3cf4a2
-
-#region: "{{ aws_region }}" 
 
