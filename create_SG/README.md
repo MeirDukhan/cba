@@ -19,7 +19,7 @@ The following are the default values set in the vars/main.yml file. They are ove
 - aws_region: eu-west-2
 - project_name: "CBA"
 
-- # CBA VPC & Subnet ids
+- CBA VPC & Subnet ids
 - vpc_id: vpc-01d874d70d60c9eaf
 - subnet_id: subnet-07e470c0e45c608be
 
