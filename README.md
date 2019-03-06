@@ -43,7 +43,7 @@ $ Setup an ansible vault with file name: aws_keys.yml
 - echo 'my-ansible-vault-password' > vault-pass.txt && chmod 400 vault-pass.txt  
 
 
-$ ansible-playbook run.yml --vault-password-file vault-pass.txt --extra-vars 'my_ip=\<IP of my workstation>/32'
+$ ansible-playbook run.yml --vault-password-file vault-pass.txt --extra-vars 'my_ip=<IP of my workstation>/32'
 
 A log is available in ~/ansible.log 
 
