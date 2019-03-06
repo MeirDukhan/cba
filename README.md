@@ -66,9 +66,9 @@ Key pair creation
 
 	- ansible localhost -m include_role -a name=create_KP --vault-password-file vault-pass.txt
 
-Security Group creation: 
-
+Security Group creation. 
 Note that creation of the security group requires the IP of your workstation as an extra parameter, to allow SSH and HTTP.
+
 	- ansible localhost -m include_role -a name=create_SG --vault-password-file vault-pass.txt --extra-vars "my_ip=<IP of my workstation>/32"
 
 EC2 instance creation
