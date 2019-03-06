@@ -10,7 +10,7 @@
 - ec2_group:
 
         name: "{{ project_name}}_SG"
-        description: "{{ project_name}} Test security group"
+        description: "{{ project_name}} Challenge security group"
         region: "{{ aws_region }}" 
         
         aws_access_key: "{{ aws_access_key_id }}"
