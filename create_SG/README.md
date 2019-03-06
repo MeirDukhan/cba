@@ -1,7 +1,10 @@
 Role Name
 =========
 
-Create a security group. 
+Create a Security Group (on the existing VPC) which only allows access from the following:
+- Inbound - Your IP address (SSH, HTTP); Ansible server IP address (SSH)
+- Outbound – HTTPS & HTTP to any IP address
+
 
 Requirements
 ------------
@@ -19,7 +22,7 @@ The following are the default values set in the vars/main.yml file. They are ove
 - aws_region: eu-west-2
 - project_name: "CBA"
 
-CBA VPC & Subnet ids
+CBA VPC & Subnet ids default values
 - vpc_id: vpc-01d874d70d60c9eaf
 - subnet_id: subnet-07e470c0e45c608be
 
