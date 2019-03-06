@@ -43,7 +43,7 @@ $ Setup an ansible vault with file name: aws_keys.yml
 - echo 'my-ansible-vault-password' > vault-pass.txt && chmod 400 vault-pass.txt  
 
 
-$ ansible-playbook run.yml --vault-password-file vault-pass.txt --extra-vars 'my_ip=<IP of my workstation>/32'
+$ ansible-playbook run.yml --vault-password-file vault-pass.txt --extra-vars 'my_ip=\<IP of my workstation>/32'
 
 A log is available in ~/ansible.log 
 
@@ -63,7 +63,7 @@ Checking
 IMPORTANT
 ---------
 The EC2 instance created is an Amazon one, so login using the ec2-user@<IP address> 
-	- **ssh -i ~/.ssh/cba-challenge-key.pem ec2-user@<IP Address>**
+	- **ssh -i ~/.ssh/cba-challenge-key.pem ec2-user@\<IP Address>**
 
 Running a specific role
 -----------------------
