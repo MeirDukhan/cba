@@ -2,9 +2,13 @@
 aws_region: eu-west-2
 project_name: "CBA"
 
+# # mdukhan3 account -- vpc_id and subnet_id in for CBA challenge
+subnet_id: subnet-03b5ed8bed838f7a7
+vpc_id: vpc-025e4c83fe107c9ac
+
 # CBA VPC & Subnet ids 
-vpc_id: vpc-01d874d70d60c9eaf
-subnet_id: subnet-07e470c0e45c608be
+#vpc_id: vpc-01d874d70d60c9eaf
+#subnet_id: subnet-07e470c0e45c608be
 
 # My environment VPC & Subnet ids 
 #vpc_id: vpc-ba52c8d3
